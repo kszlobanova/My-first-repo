@@ -31,3 +31,4 @@ e = d / 2
 print('Число ', d, ' делить на 2 равно ', e)
 f = e - b
 print('Число ', e, ' минус ', b, ' равно ', f)
+print('Hello world')
