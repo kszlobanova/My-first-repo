@@ -32,3 +32,15 @@ print('Число ', d, ' делить на 2 равно ', e)
 f = e - b
 print('Число ', e, ' минус ', b, ' равно ', f)
 print('Hello world bla bla bla')
+
+# из двух вводов делаем словарь
+list_rus = input().split()
+list_eng = input().split()
+i = 0
+dictionary = {}
+while len(list_rus) == len(list_eng):
+    dictionary[list_rus[i]] = list_eng[i]
+    i += 1
+    if i >= len(list_rus):
+        print(dictionary)
+        break
