@@ -1,0 +1,21 @@
+#В этой версии мы смотрим на ЛЕВЫЙ символ
+some_string = input()
+left_character = ''             #создаем пустую строку, чтобы к ней потом присоединять объекты
+seq_len_counter = 1
+for character in some_string:
+    if character == left_character: # символ совпал с предыдущим
+        seq_len_counter += 1
+    elif seq_len_counter > 1:           # одинаковые закончились, следующий символ не похожий
+        print(left_character, seq_len_counter, sep = '', end = '')
+        seq_len_counter = 1
+    else:                           # символ одиночный
+        print(left_character, sep = '', end = '')        # sep - показывает, что нам надо использовать для разделения объектов в принте, end - показывает, чем закончить строку
+        
+    left_character = character                  # здесь наш текущий символ становится левым, и мы сравниваем уже с ним
+    
+if seq_len_counter > 1:           # одинаковые закончились, следующий символ не похожий
+        print(left_character, seq_len_counter, sep = '', end = '')
+else:                           # символ одиночный
+        print(left_character, sep = '', end = '')
+        
+#В этой версии повтор кода, что выглядит не очень лаконично. Можно просто добавить лишний символ в конец строки (см. Version2)
